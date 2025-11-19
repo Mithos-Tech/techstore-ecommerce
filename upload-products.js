@@ -1,0 +1,11 @@
+// Este script sube los productos restantes a Firestore
+const products = [
+  {id:'p5',name:'SSD 1TB NVMe Gen4',category:'Componentes',price:359.00,originalPrice:399.00,discount:'-10%',imageUrl:'https://images.unsplash.com/photo-1628557044797-f21a177c37ec?auto=format&fit=crop&w=800&q=80',inStock:true,rating:5,stock:8,description:'Reduce los tiempos de carga a cero con este SSD NVMe de 1TB. Velocidades de lectura y escritura ultrarrápidas para un rendimiento superior.'},
+  {id:'p6',name:'Headset Wireless 7.1',category:'Audio',price:349.99,imageUrl:'https://images.unsplash.com/photo-1612444530582-fc66183b16f7?auto=format&fit=crop&w=800&q=80',inStock:true,rating:4.6,stock:12,description:'Escucha cada detalle con estos audífonos inalámbricos. Sonido envolvente 7.1 y un micrófono con cancelación de ruido.'},
+  {id:'p7',name:'Gabinete Crystal Series',category:'Componentes',price:250.00,imageUrl:'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80',inStock:true,rating:4.5,stock:5,description:'Un gabinete espacioso y con excelente flujo de aire para mantener tus componentes frescos. Panel de vidrio templado y filtros de polvo.'},
+  {id:'p8',name:'Silla Gamer Ergonómica',category:'Mobiliario',price:899.00,originalPrice:1100.00,discount:'-20%',imageUrl:'https://images.unsplash.com/photo-1598550476439-c923097980dc?auto=format&fit=crop&w=800&q=80',inStock:true,rating:4.8,stock:3,description:'Comodidad suprema para largas sesiones de juego. Soporte lumbar ajustable y materiales transpirables de alta calidad.'},
+  {id:'p9',name:'Micrófono Streaming USB',category:'Audio',price:220.00,imageUrl:'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',inStock:true,rating:4.7,stock:8,description:'Calidad de estudio para tus streams y podcasts. Conexión Plug & Play y patrón polar cardioide para una voz clara.'},
+  {id:'p10',name:'Laptop Gamer RTX 4060',category:'Laptops',price:4599.00,imageUrl:'https://images.unsplash.com/photo-1593642632823-8f7856677741?auto=format&fit=crop&w=800&q=80',inStock:true,rating:4.9,stock:2,description:'Potencia portátil definitiva. Equipada con la última tarjeta gráfica RTX y procesador de alto rendimiento para jugar donde sea.'}
+];
+
+console.log('Productos a subir:', JSON.stringify(products, null, 2));

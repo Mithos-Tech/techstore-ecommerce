@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="https://res.cloudinary.com/dkoshgzxo/image/upload/v1763264025/Favicon_alyv3e.ico" sizes="any" />
+    <link rel="icon" href="https://res.cloudinary.com/dkoshgzxo/image/upload/v1763264025/Favicon_zrbu6r.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dkoshgzxo/image/upload/v1763264026/Favicon_lrnhjo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>TechStore - Componentes y Periféricos Gaming de Alta Gama</title>
+    <meta name="description" content="TechStore es tu tienda de confianza para comprar componentes de PC, teclados mecánicos, mouses gamer y monitores de alta frecuencia. Envíos a todo el Perú." />
+    <meta name="keywords" content="pc gamer, componentes pc, tarjeta de video, procesadores, teclados mecánicos, mouse gaming, techstore peru, hardware" />
+    <meta name="author" content="Inspyrio" />
+    <meta name="theme-color" content="#0003FF">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://techstore-demo.web.app/" />
+    <meta property="og:title" content="TechStore - Componentes y Periféricos Gaming" />
+    <meta property="og:description" content="Arma tu setup ideal con los mejores productos del mercado. Rendimiento, diseño y durabilidad para gamers profesionales." />
+    <meta property="og:image" content="https://res.cloudinary.com/dkoshgzxo/image/upload/v1763270090/hero_ikmpu8.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://techstore-demo.web.app/" />
+    <meta property="twitter:title" content="TechStore - Componentes y Periféricos Gaming" />
+    <meta property="twitter:description" content="Arma tu setup ideal con los mejores productos del mercado. Rendimiento, diseño y durabilidad para gamers." />
+    <meta property="twitter:image" content="https://res.cloudinary.com/dkoshgzxo/image/upload/v1763270090/hero_ikmpu8.png" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'navy-dark': '#00033D',
+              'blue-electric': '#0003FF',
+              'purple-accent': '#9771FF',
+              'lavender-light': '#F0F3FF',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      /* Fade-in animation for scroll-to-top button */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      
+      .animate-page-fade-in {
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      /* --- HERO SECTION STYLES --- */
+  
+      /* 1. Hero Background & Blur Circles */
+      .hero-bg {
+        background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FF 50%, #EFF2FE 100%);
+      }
+      .hero-bg::before, .hero-bg::after {
+          content: '';
+          position: absolute;
+          border-radius: 50%;
+          z-index: 0;
+          pointer-events: none;
+      }
+      .hero-bg::before {
+          width: 30vw;
+          height: 30vw;
+          max-width: 400px;
+          max-height: 400px;
+          background-color: rgba(219, 234, 254, 0.5);
+          top: -10%;
+          right: -5%;
+          filter: blur(100px);
+      }
+      .hero-bg::after {
+          width: 25vw;
+          height: 25vw;
+          max-width: 350px;
+          max-height: 350px;
+          background-color: rgba(237, 233, 254, 0.6);
+          bottom: -15%;
+          left: 0;
+          filter: blur(80px);
+      }
+
+      /* 2. Shimmer Badge Animation */
+      @keyframes shimmer {
+          0% { background-position: -500px 0; }
+          100% { background-position: 500px 0; }
+      }
+      .shimmer-badge {
+          background: linear-gradient(to right, transparent 20%, rgba(255,255,255,0.8) 50%, transparent 80%);
+          background-size: 1000px 100%;
+          animation: shimmer 4s infinite linear;
+      }
+      
+      /* 3. Gradient Text */
+      .text-gradient {
+          background: linear-gradient(135deg, #0003FF, #9771FF);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #0003FF;
+      }
+
+      /* 4. Primary Button Shine Effect */
+      .btn-primary-shine {
+          position: relative;
+          overflow: hidden;
+      }
+      .btn-primary-shine::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -150%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.4) 50%, transparent 80%);
+          transform: skewX(-25deg);
+          transition: left 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .btn-primary-shine:hover::before {
+          left: 150%;
+      }
+
+      /* 5. Product Floating Animation */
+      @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+          100% { transform: translateY(0px); }
+      }
+      .product-float {
+          animation: float 6s ease-in-out infinite;
+          filter: drop-shadow(0 30px 60px rgba(0,3,61,0.15));
+      }
+
+      /* 6. Category Featured Badge Pulse Animation */
+      @keyframes pulse-subtle {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: .95;
+        }
+      }
+      .animate-pulse-subtle {
+        animation: pulse-subtle 2.5s ease-in-out infinite;
+      }
+
+      /* --- PRODUCT CARD STYLES --- */
+
+      /* 1. Price animated underline */
+      .price-underline::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #0003FF, #9771FF);
+        transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .group:hover .price-underline::after {
+        width: 100%;
+      }
+
+      /* 2. Stock indicator blink animation */
+      @keyframes blink {
+        50% { opacity: 0.2; }
+      }
+      .animate-blink {
+        animation: blink 1.5s linear infinite;
+      }
+
+      /* 3. Discount badge pulse animation */
+      @keyframes pulse-badge {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+      .animate-pulse-badge {
+        animation: pulse-badge 2s ease-in-out infinite;
+      }
+
+      /* 4. Add to cart button ripple effect */
+      .ripple {
+          position: absolute;
+          border-radius: 50%;
+          transform: scale(0);
+          animation: ripple 600ms linear;
+          background-color: rgba(255, 255, 255, 0.7);
+      }
+      @keyframes ripple {
+          to {
+              transform: scale(4);
+              opacity: 0;
+          }
+      }
+      
+      /* --- CART PAGE EXPERIENCE STYLES --- */
+      @keyframes toast-in-out {
+        0% { transform: translateY(-150%); opacity: 0; }
+        10% { transform: translateY(0); opacity: 1; }
+        90% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(-150%); opacity: 0; }
+      }
+      .animate-toast {
+        animation: toast-in-out 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      }
+
+      @keyframes slide-in-down {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-slide-in-down {
+        animation: slide-in-down 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+
+      @keyframes fade-out-right {
+        from { opacity: 1; transform: translateX(0); }
+        to { opacity: 0; transform: translateX(50px); }
+      }
+      .animate-fade-out-right {
+        animation: fade-out-right 0.5s ease-in-out forwards;
+      }
+
+      @keyframes subtle-bounce {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+      }
+      .animate-subtle-bounce {
+        animation: subtle-bounce 0.3s ease-in-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^6.25.1",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.5.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

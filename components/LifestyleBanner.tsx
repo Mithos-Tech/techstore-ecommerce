@@ -8,7 +8,7 @@ const LifestyleBanner: React.FC = () => {
             <div className="container mx-auto max-w-7xl px-6">
                 <div className="flex flex-col md:flex-row items-center bg-white rounded-3xl overflow-hidden shadow-sm">
                     <div className="w-full md:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Lifestyle Gaming Setup" className="w-full h-full object-cover min-h-[300px] md:min-h-[500px]" loading="lazy" decoding="async" />
+                        <img src="https://res.cloudinary.com/dkoshgzxo/image/upload/v1763615821/Componentes_de_Calidad_Premium_z4nskb.png" alt="Lifestyle Gaming Setup" className="w-full h-full object-cover min-h-[300px] md:min-h-[500px]" loading="lazy" decoding="async" />
                     </div>
                     <div className="w-full md:w-1/2 p-10 md:p-16 text-center md:text-left">
                         <h2 className="text-3xl md:text-4xl font-bold text-navy-dark">

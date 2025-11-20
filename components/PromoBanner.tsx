@@ -23,7 +23,7 @@ const PromoBanner: React.FC = () => {
           </div>
           <div className="md:w-2/5 flex justify-center">
             <img 
-              src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80" 
+              src="https://res.cloudinary.com/dkoshgzxo/image/upload/v1763615928/PC_Armado_m0brs0.jpg" 
               alt="PC Builder" 
               className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500"
               loading="lazy"
